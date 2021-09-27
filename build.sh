@@ -15,8 +15,8 @@ mkdir ~/twrp11 && cd ~/twrp11
 
 echo " ===+++ Syncing Recovery Sources +++==="
 repo init --depth=1 -u $MANIFEST
-repo sync
-repo sync
+repo sync --force-sync -c -j16 --no-tags
+repo sync --force-sync -c -j16 --no-tags
 git clone --depth=1 $DT_LINK $DT_PATH
 
 echo " ===+++ Building Recovery +++==="
